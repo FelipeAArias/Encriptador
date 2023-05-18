@@ -58,8 +58,15 @@ button{
 }
 
 .resultado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado textarea{
     width: 200px;
-    height: 300px;
+    height: 250px;
     padding: 10px;
     margin: 10px;
     text-align: center;
