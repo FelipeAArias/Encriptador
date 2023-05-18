@@ -46,7 +46,7 @@ function encriptar() {
      }
 
     
-    mostrar.textContent = encriptado.join("");
+    mostrar.value = encriptado.join("");
 
 }
 
@@ -135,13 +135,13 @@ function desencriptar() {
 
         }
     }
-    mostrar.textContent = encriptado.join("");
+    mostrar.value = encriptado.join("");
 }
 
 var copy = document.getElementById("copiar");
 
 copy.addEventListener("click", ()=>{
     var mostrar = document.getElementById("mostrar");
-    resultado = mostrar.textContent;
+    resultado = mostrar.value;
     navigator.clipboard.writeText(resultado);
 })

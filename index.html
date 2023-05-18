@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Encriptador</title>
-    <link rel="stylesheet" src="principal.css">
-</head>
-<body>
-    <textarea id="miTextArea" placeholder="Escribe aqui ..."></textarea>
-    <button onclick="encriptar()">Encriptar</button> 
-    <button onclick="desencriptar()">Desencriptar</button> 
-    <button id="copiar">Copiar texto</button>
-    <div id="mostrar"></div> 
+  </head>
+  <body>
+    <div class="contenedor">
+        <img src="./imagenes/logoAlura.png" alt="" class="logo">
+      <div class="entrada">
+        <textarea id="miTextArea" placeholder="Escribe aqui ..."></textarea>
+        <button onclick="encriptar()">Encriptar</button>
+        <button onclick="desencriptar()">Desencriptar</button>
+        <button id="copiar">Copiar texto</button>
+      </div>
+      <div class="imagen">
+        <img src="./imagenes/Muñeco.png" alt="" />
+        <textarea id="mostrar" class="resultado" placeholder="Texto procesado..."></textarea>
+      </div>
+    </div>
     <footer>
-        <div>
-            &copy;
-        </div>
-    </footer> 
-<script src="encriptador.js"></script> 
-</body>
+      <div>
+        <span>Desarrollado por ... - Derechos reservados &copy;</span>
+      </div>
+    </footer>
+    <script src="./encriptador.js"></script>
+  </body>
 </html>
