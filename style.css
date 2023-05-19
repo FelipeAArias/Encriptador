@@ -1,13 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body{
     background-color: #e0e0e0;
     width: 100vw;
-    padding: 30px;
+    padding: 25px;
 }
 
 .logo{
@@ -24,7 +19,7 @@ body{
 }
 
 .entrada{
-    padding: 30px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +52,7 @@ button:hover{
 }
 
 button:active{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .imagen{
