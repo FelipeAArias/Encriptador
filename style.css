@@ -50,6 +50,16 @@ button{
     margin: 5px;
 }
 
+button:hover{
+    cursor: pointer;
+    color: #0e0e0e;
+    background-color: #e0e0e0;
+}
+
+button:active{
+    transform: scale(1.1);
+}
+
 .imagen{
     display: flex;
     flex-direction: row-reverse;
