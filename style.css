@@ -57,7 +57,9 @@ button:hover{
 }
 
 button:active{
+    background: linear-gradient(#0e0e0e,#e0e0e0);
     transform: scale(1.1);
+    transition: all 500;
 }
 
 .imagen{
