@@ -4,7 +4,7 @@ function encriptar() {
 
     // Obtener el texto del textarea
     var texto = miTextArea.value;
-    console.log(texto)
+
 
     var encriptado = [];
     
@@ -19,24 +19,19 @@ function encriptar() {
          switch (encriptado[i]) {
              case 'a':
                  encriptado[i] = 'ai';
-                 console.log(encriptado[i]);
                  break;
              case 'e':
                  encriptado[i] = 'enter';
-                 console.log(encriptado[i]);
                  break;
              case 'i':
                  encriptado[i] = 'imes';
-                 console.log(encriptado[i]);
                  break;
  
              case 'o':
                  encriptado[i] = 'ober';
-                 console.log(encriptado[i]);
                  break;
              case 'u':
                  encriptado[i] = 'ufat';
-                 console.log(encriptado[i]);
                  break;
              default:
  
@@ -56,7 +51,6 @@ function desencriptar() {
 
     // Obtener el texto del textarea
     var texto = miTextArea.value;
-    console.log(texto)
 
     var encriptado = [];
     var codigo;
@@ -80,7 +74,6 @@ function desencriptar() {
                     encriptado[i] = 'a';
                     encriptado[i + 1] = '';
                     i = i + 1;
-                    console.log(encriptado[i]);
                 }
                 break;
             case 'e':
@@ -92,7 +85,6 @@ function desencriptar() {
                     encriptado[i + 3] = '';
                     encriptado[i + 4] = '';
                     i = i + 4;
-                    console.log(encriptado[i]);
                 }
                 break;
             case 'i':
@@ -103,7 +95,6 @@ function desencriptar() {
                     encriptado[i + 2] = '';
                     encriptado[i + 3] = '';
                     i = i + 3;
-                    console.log(encriptado[i]);
                 }
                 break;
 
@@ -115,7 +106,6 @@ function desencriptar() {
                     encriptado[i + 2] = '';
                     encriptado[i + 3] = '';
                     i = i + 3;
-                    console.log(encriptado[i]);
                 }
                 break;
             case 'u':
@@ -126,7 +116,6 @@ function desencriptar() {
                     encriptado[i + 2] = '';
                     encriptado[i + 3] = '';
                     i = i + 3;
-                    console.log(encriptado[i]);
                 }
                 break;
             default:
