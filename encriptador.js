@@ -1,79 +1,80 @@
+var encriptado = [];
+var texto;
+
+function traerDatos(){
+// Traemos el textarea mediante su ID
+var miTextArea = document.getElementById("miTextArea");
+// Traemos el div mediante su ID 
+var mostrar = document.getElementById("mostrar");
+// En una variable se coloca lo escrito en el text area
+ texto = miTextArea.value;
+
+for (var i = 0; i < texto.length; i++) {
+    encriptado.push(texto.charAt(i));
+
+}
+console.log(encriptado)
+}
+
+
 function encriptar() {
-    // Obtener el elemento textarea por su ID
-    var miTextArea = document.getElementById("miTextArea");
-
-    // Obtener el texto del textarea
-    var texto = miTextArea.value;
-
-
-    var encriptado = [];
-    
-    var mostrar = document.getElementById("mostrar");
-
+    traerDatos();
+   
     for (var i = 0; i < texto.length; i++) {
-        encriptado.push(texto.charAt(i));
+        switch (encriptado[i]) {
+            case 'a':
+                encriptado[i] = 'ai';
+                console.log(encriptado[i]);
+                break;
+            case 'e':
+                encriptado[i] = 'enter';
+                console.log(encriptado[i]);
+                break;
+            case 'i':
+                encriptado[i] = 'imes';
+                console.log(encriptado[i]);
+                break;
 
+            case 'o':
+                encriptado[i] = 'ober';
+                console.log(encriptado[i]);
+                break;
+            case 'u':
+                encriptado[i] = 'ufat';
+                console.log(encriptado[i]);
+                break;
+            default:
+
+                break;
+
+        }
     }
 
-    for (var i = 0; i < texto.length; i++) {
-         switch (encriptado[i]) {
-             case 'a':
-                 encriptado[i] = 'ai';
-                 break;
-             case 'e':
-                 encriptado[i] = 'enter';
-                 break;
-             case 'i':
-                 encriptado[i] = 'imes';
-                 break;
- 
-             case 'o':
-                 encriptado[i] = 'ober';
-                 break;
-             case 'u':
-                 encriptado[i] = 'ufat';
-                 break;
-             default:
- 
-                 break;
- 
-         }
-     }
-
-    
-    mostrar.value = encriptado.join("");
+    // Mostramos en el div el resultado, Usamos "join" para que los muestre sin las separaciones del array 
+    mostrar.textContent = encriptado.join("");
+    encriptado = [];
+    console.log(encriptado);
 
 }
 
 function desencriptar() {
-    // Obtener el elemento textarea por su ID
-    var miTextArea = document.getElementById("miTextArea");
-
-    // Obtener el texto del textarea
-    var texto = miTextArea.value;
-
-    var encriptado = [];
+    traerDatos();
+ 
+//variable que usamos para almacenar dentro del bucle
     var codigo;
-    var mostrar = document.getElementById("mostrar");
-
-    for (var i = 0; i < texto.length; i++) {
-        encriptado.push(texto.charAt(i));
-
-    }
-
-
-    
-
     for (var i = 0; i < encriptado.length; i++) {
-        // console.log(encriptado[i]);
+    
         switch (encriptado[i]) {
             case 'a':
+
                 codigo = encriptado[i] + encriptado[i + 1];
                 if (codigo == 'ai') {
 
                     encriptado[i] = 'a';
+                    // saltamos los caracteres concatenados
                     encriptado[i + 1] = '';
                     i = i + 1;
+                    console.log(encriptado[i]);
                 }
                 break;
             case 'e':
@@ -85,6 +86,7 @@ function desencriptar() {
                     encriptado[i + 3] = '';
                     encriptado[i + 4] = '';
                     i = i + 4;
+                    console.log(encriptado[i]);
                 }
                 break;
             case 'i':
@@ -95,6 +97,7 @@ function desencriptar() {
                     encriptado[i + 2] = '';
                     encriptado[i + 3] = '';
                     i = i + 3;
+                    console.log(encriptado[i]);
                 }
                 break;
 
@@ -106,6 +109,7 @@ function desencriptar() {
                     encriptado[i + 2] = '';
                     encriptado[i + 3] = '';
                     i = i + 3;
+                    console.log(encriptado[i]);
                 }
                 break;
             case 'u':
@@ -116,6 +120,7 @@ function desencriptar() {
                     encriptado[i + 2] = '';
                     encriptado[i + 3] = '';
                     i = i + 3;
+                    console.log(encriptado[i]);
                 }
                 break;
             default:
@@ -124,13 +129,14 @@ function desencriptar() {
 
         }
     }
-    mostrar.value = encriptado.join("");
+    mostrar.textContent = encriptado.join("");
+    encriptado = [];
 }
 
-var copy = document.getElementById("copiar");
+function copiar() {
+    
+var mostrar = document.getElementById("mostrar"); //almacenamos el div completo
 
-copy.addEventListener("click", ()=>{
-    var mostrar = document.getElementById("mostrar");
-    resultado = mostrar.value;
-    navigator.clipboard.writeText(resultado);
-})
+navigator.clipboard.writeText(mostrar.textContent); //copiamos solo el contenido del div, seria el texto
+document.getElementById("miTextArea").value= "";  // borramos el otro textarea para poder pegar lo que copiamos
+}
