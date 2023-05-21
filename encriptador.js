@@ -13,7 +13,6 @@ for (var i = 0; i < texto.length; i++) {
     encriptado.push(texto.charAt(i));
 
 }
-console.log(encriptado)
 }
 
 
