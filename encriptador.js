@@ -1,25 +1,25 @@
 var encriptado = [];
 var texto;
 
-function traerDatos(){
-// Traemos el textarea mediante su ID
-var miTextArea = document.getElementById("miTextArea");
-// Traemos el div mediante su ID 
-var mostrar = document.getElementById("mostrar");
-// En una variable se coloca lo escrito en el text area
- texto = miTextArea.value;
+function traerDatos() {
+    // Traemos el textarea mediante su ID
+    var miTextArea = document.getElementById("miTextArea");
+    // Traemos el div mediante su ID 
+    var mostrar = document.getElementById("mostrar");
+    // En una variable se coloca lo escrito en el text area
+    texto = miTextArea.value;
 
-for (var i = 0; i < texto.length; i++) {
-    encriptado.push(texto.charAt(i));
+    for (var i = 0; i < texto.length; i++) {
+        encriptado.push(texto.charAt(i));
 
-}
-console.log(encriptado)
+    }
+    console.log(encriptado)
 }
 
 
 function encriptar() {
     traerDatos();
-   
+
     for (var i = 0; i < texto.length; i++) {
         switch (encriptado[i]) {
             case 'a':
@@ -59,11 +59,11 @@ function encriptar() {
 
 function desencriptar() {
     traerDatos();
- 
-//variable que usamos para almacenar dentro del bucle
+
+    //variable que usamos para almacenar dentro del bucle
     var codigo;
     for (var i = 0; i < encriptado.length; i++) {
-    
+
         switch (encriptado[i]) {
             case 'a':
 
@@ -134,9 +134,9 @@ function desencriptar() {
 }
 
 function copiar() {
-    
-var mostrar = document.getElementById("mostrar"); //almacenamos el div completo
 
-navigator.clipboard.writeText(mostrar.textContent); //copiamos solo el contenido del div, seria el texto
-document.getElementById("miTextArea").value= "";  // borramos el otro textarea para poder pegar lo que copiamos
+    var mostrar = document.getElementById("mostrar"); //almacenamos el div completo
+
+    navigator.clipboard.writeText(mostrar.textContent); //copiamos solo el contenido del div, seria el texto
+    document.getElementById("miTextArea").value = "";  // borramos el otro textarea para poder pegar lo que copiamos
 }
