@@ -1,95 +1,97 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    background-color: #FFF;
+
 }
 
-body{
-    background-color: #e0e0e0;
-    width: 100vw;
-    padding: 25px;
+main {
+
+    width: auto;
+    height: 600px;
+    margin: 200px 10px;
+    display: flex;
+    background-color: rgba(33, 157, 173, 0.5);
+    align-items: center;
+    border: 5px solid #FFF;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 10px rgba(33, 157, 173, 0.5);
+  
 }
 
-.logo{
+.imagenLogo {
     position: absolute;
-    left: 10px;
-    top: 50px;
+    top: 230px;
+
 }
 
-.contenedor {
+.primeraParte,
+.terceraParte {
+    background-color: rgb(39, 166, 175);
+    margin: 50px auto;
+    width: 30%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+
+}
+
+
+.cajaBotones {
     width: 100%;
-    border: 1px solid #0e0e0e;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.entrada{
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-right: 3px dashed black;
-}
-
-.entrada textarea{
-    text-align: center;
-    width: 500px;
     height: 100px;
-    padding: 10px;
-    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.advertencia{
+    margin-top:50px
 }
 
-button{
-    width: 120px;
-    height: 30px;
-    text-align: center;
+.icono{
+    width:20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.parrafo_advertencia{
+    display: inline-block;
+    font-size: 20px;
+}
+
+
+.btnEncriptar,
+.btnDesencriptar,
+.btnCopiar {
+    font-size: 20px;
+    color: #FFF;
+    border: 0px solid rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    color: #e0e0e0;
-    background-color: #0e0e0e;
-    margin: 5px;
+    width: 165px;
+    height: 40px;
+    background: transparent;
 }
 
-button:hover{
-    cursor: pointer;
-    color: #0e0e0e;
-    background-color: #e0e0e0;
+button:hover {
+    background-color: rgba(152, 204, 155, 0.678);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
 }
 
-button:active{
-    background: linear-gradient(#0e0e0e,#e0e0e0);
-    transform: scale(1.1);
-    transition: all 500;
+button:active {
+    height: 45px;
+    font-size: 22px;
 }
 
-.imagen{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-}
-
-.resultado{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.resultado textarea{
-    width: 200px;
-    height: 250px;
-    padding: 10px;
-    margin: 10px;
+.cajaTextoUno,
+.cajaTextoDos {
+    font-size: 20px;
+    width: 90%;
+    height: 65%;
+    padding: 0;
+    border: none;
+    resize: none;
+    background-color: rgb(39, 166, 175);
+    outline: none;
     text-align: center;
-    background-color: transparent;
-}
-
-footer{
-    background-color: black;
-    color: white;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
