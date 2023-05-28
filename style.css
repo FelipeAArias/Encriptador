@@ -95,3 +95,13 @@ button:active {
     outline: none;
     text-align: center;
 }
+footer{
+    background-color: #ddd;
+    text-align: center;
+
+}
+.copyright{
+    font-size: 20px;
+    font-weight:lighter;
+    padding: 20px 0;
+}

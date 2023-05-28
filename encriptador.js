@@ -78,7 +78,7 @@ function desencriptar() {
                 }
                 break;
             case 'e':
-                codigo = encriptado[i] + encriptado[i + 1] + encriptado[i + 2] + encriptado[i + 3] + encriptado[i + 4];
+                codigo = encriptado[i] + encriptado[i + 1] + encriptado[i + 2]  + encriptado[i + 3] + encriptado[i + 4];
                 if (codigo == 'enter') {
                     encriptado[i] = 'e';
                     encriptado[i + 1] = '';
@@ -134,9 +134,6 @@ function desencriptar() {
 }
 
 function copiar() {
-
-    var mostrar = document.getElementById("mostrar"); //almacenamos el div completo
-
-    navigator.clipboard.writeText(mostrar.textContent); //copiamos solo el contenido del div, seria el texto
-    document.getElementById("miTextArea").value = "";  // borramos el otro textarea para poder pegar lo que copiamos
+    navigator.clipboard.writeText(mostrar.textContent);
+    miTextArea.value = "";
 }
